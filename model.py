@@ -17,6 +17,10 @@ RUN_TIME = 120  # seconds
 
 Day = NewType("Day", int)
 
+
+"""
+Generating some random data for the optimization model
+"""
 NUM_PLANTS = 1
 NUM_PRODUCTS = 2
 LINES_PER_PLANT = 2
@@ -85,6 +89,7 @@ class OptimizationModel:
             for line in PLANT_LINES
             for d in HORIZON
         }
+        # if there is any production of product pr on line line at day d
         self.is_produced = {
             (pr, line, d): self.bool_variable(name=f"is_produced_{pr}_{line}_{d}")
             for pr in PRODUCTS
