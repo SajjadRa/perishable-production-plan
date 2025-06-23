@@ -32,7 +32,7 @@ DEMANDS = {
     (pr, pl, d): randint(150, 200) for pr in PRODUCTS for pl in PLANTS for d in HORIZON
 }
 PRODUCTION_RATES = {
-    (pr, pl): randint(8, 10) for pr in PRODUCTS for pl in PLANT_LINES
+    (pr, pl): 10 for pr in PRODUCTS for pl in PLANT_LINES
 }  # per hour
 MIN_STOCK = {(pr, pl): 5 for pr in PRODUCTS for pl in PLANTS}
 MOQ = {(pr, pl): 50 for pr in PRODUCTS for pl in PLANT_LINES}

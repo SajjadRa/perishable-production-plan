@@ -66,7 +66,7 @@ def run():
         "shortage"
     ].T
 
-    logger("Done!")
+    logger.info("Done!")
 
 
 # Press the green button in the gutter to run the script.
